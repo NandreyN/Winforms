@@ -11,8 +11,12 @@ namespace WinFormsViewFile
 {
     public partial class Form1 : Form
     {
+        public TextBox GetBox => textBox;
+
         public Form1()
         {
+            SearchForm sForm = new SearchForm();;
+            sForm.Show();
             InitializeComponent();
         }
 
@@ -35,7 +39,7 @@ namespace WinFormsViewFile
                         using (var reader = new StreamReader(myStream, Encoding.UTF8))
                         {
                             string value = reader.ReadToEnd();
-                            MessageBox.Show(value);
+                            textBox.Text = value;
                         }
                     }
                 }

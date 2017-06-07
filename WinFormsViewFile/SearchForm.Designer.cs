@@ -1,6 +1,6 @@
 ﻿namespace WinFormsViewFile
 {
-    partial class Form1
+    partial class SearchForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,37 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Choose = new System.Windows.Forms.Button();
-            this.textBox = new System.Windows.Forms.TextBox();
+            this.Search = new System.Windows.Forms.Button();
+            this.SearchBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // Choose
+            // Search
             // 
-            this.Choose.Location = new System.Drawing.Point(308, 267);
-            this.Choose.Name = "Choose";
-            this.Choose.Size = new System.Drawing.Size(110, 23);
-            this.Choose.TabIndex = 0;
-            this.Choose.Text = "Choose";
-            this.Choose.UseVisualStyleBackColor = true;
-            this.Choose.Click += new System.EventHandler(this.Choose_Click);
+            this.Search.Location = new System.Drawing.Point(183, 62);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(75, 23);
+            this.Search.TabIndex = 0;
+            this.Search.Text = "Search";
+            this.Search.UseVisualStyleBackColor = true;
+            this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
-            // textBox
+            // SearchBox
             // 
-            this.textBox.Location = new System.Drawing.Point(12, 12);
-            this.textBox.Multiline = true;
-            this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(406, 203);
-            this.textBox.TabIndex = 1;
+            this.SearchBox.Location = new System.Drawing.Point(13, 13);
+            this.SearchBox.Name = "SearchBox";
+            this.SearchBox.Size = new System.Drawing.Size(245, 20);
+            this.SearchBox.TabIndex = 1;
             // 
-            // Form1
+            // SearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 302);
-            this.Controls.Add(this.textBox);
-            this.Controls.Add(this.Choose);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(270, 97);
+            this.Controls.Add(this.SearchBox);
+            this.Controls.Add(this.Search);
+            this.Name = "SearchForm";
+            this.Text = "SearchForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -66,8 +65,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Choose;
-        private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.Button Search;
+        private System.Windows.Forms.TextBox SearchBox;
     }
 }
-
