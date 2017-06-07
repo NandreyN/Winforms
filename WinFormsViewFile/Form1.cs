@@ -57,6 +57,11 @@ namespace WinFormsViewFile
             bool found = textBox.Text.Contains(srchData);
             if (found)
             {
+                int index = textBox.Text.IndexOf(srchData, StringComparison.Ordinal);
+                textBox.SelectionStart = index;
+                textBox.SelectionLength = srchData.Length;
+                textBox.Focus();
+                textBox.ScrollToCaret();
             }
             else
                 MessageBox.Show(@"Not found");
