@@ -6,16 +6,16 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace WinFormsViewFile
 {
     public partial class Form1 : Form
     {
-        public TextBox GetBox => textBox;
-
+        private SearchForm sForm;
         public Form1()
         {
-            SearchForm sForm = new SearchForm();;
+            sForm = new SearchForm();;
             sForm.Show();
             InitializeComponent();
         }
@@ -48,6 +48,18 @@ namespace WinFormsViewFile
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
             }
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            string srchData = sForm.SearchBoxContent;
+            // Perform searching
+            bool found = textBox.Text.Contains(srchData);
+            if (found)
+            {
+            }
+            else
+                MessageBox.Show(@"Not found");
         }
     }
 }

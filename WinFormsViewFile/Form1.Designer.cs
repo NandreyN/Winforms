@@ -30,6 +30,8 @@
         {
             this.Choose = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
+            this.MainSearch = new System.Windows.Forms.TextBox();
+            this.SearchButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Choose
@@ -50,11 +52,30 @@
             this.textBox.Size = new System.Drawing.Size(406, 203);
             this.textBox.TabIndex = 1;
             // 
+            // MainSearch
+            // 
+            this.MainSearch.Location = new System.Drawing.Point(12, 241);
+            this.MainSearch.Name = "MainSearch";
+            this.MainSearch.Size = new System.Drawing.Size(406, 20);
+            this.MainSearch.TabIndex = 2;
+            // 
+            // SearchButton
+            // 
+            this.SearchButton.Location = new System.Drawing.Point(13, 266);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(97, 23);
+            this.SearchButton.TabIndex = 3;
+            this.SearchButton.Text = "Search";
+            this.SearchButton.UseVisualStyleBackColor = true;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 302);
+            this.Controls.Add(this.SearchButton);
+            this.Controls.Add(this.MainSearch);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.Choose);
             this.Name = "Form1";
@@ -68,6 +89,8 @@
 
         private System.Windows.Forms.Button Choose;
         private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.TextBox MainSearch;
+        private System.Windows.Forms.Button SearchButton;
     }
 }
 
