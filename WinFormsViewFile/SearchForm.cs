@@ -10,7 +10,9 @@ namespace WinFormsViewFile
 {
     public partial class SearchForm : Form
     {
-        public string SearchBoxContent => SearchBox.Text;
+        public string SearchBoxContent {
+            get { return SearchBox.Text; }
+        }
 
         public SearchForm()
         {
